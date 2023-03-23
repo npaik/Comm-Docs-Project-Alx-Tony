@@ -1,4 +1,31 @@
 # Getting Started
+
+## Overview
+
+## Step 1
+
+### Installation for Windows
+
+```js
+code;
+```
+
+### Installation for Mac
+
+```js
+brew install git
+```
+
+## Step 2
+
+### Register GitHub Account
+
+## Step 3
+
+### Create First repository from browser
+
+## Conclusion
+
 Colons can be used to align columns.
 
 | Tables        |      Are      |  Cool |
@@ -15,7 +42,3 @@ raw Markdown line up prettily. You can also use inline Markdown.
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
-
-```py
-import tensorflow as tf
-```
