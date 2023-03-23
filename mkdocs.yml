@@ -5,6 +5,7 @@ theme:
   features:
     - content.code.copy
     - toc.integrate
+    - content.tabs.link
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -14,9 +15,6 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
- - admonition
+  - admonition
   - pymdownx.details
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
