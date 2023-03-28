@@ -26,20 +26,24 @@ Let’s say you previously initialized the git repository on your computer and y
 To create this branch locally you need to follow the next steps:
 
 1. Open the command line interface(CLI) on your machine (Command Prompt on Windows, Terminal on MacOS, Bash or Zsh on Linux).
+
 2. Navigate to the directory of the Git repository where you want to create the branch.
   ```
   cd path/to/repo
   ```
+
 3. Create a new branch using the git branch command followed by the name of the new branch.
  ```
  git branch new-branch
  ```
 This will create a new branch called new-branch at the current HEAD (the most recent commit).
+
 4. Switch to the new branch using the git checkout command followed by the name of the new branch.
  ```
  git checkout new-branch
  ```
  This will switch the working directory to the new branch so that any changes you make will be committed to that branch instead of the main branch.
+
 5. Make changes to the files in the working directory and commit the changes using the git add and git commit commands as described in previous section.
 !!! info "Check or Switch Branch"
     To check which branch you are currently on in Git, you can use the git branch command with the -a (all) and -v (verbose) flags:
@@ -54,9 +58,9 @@ This will create a new branch called new-branch at the current HEAD (the most re
     ```
 
 ## Creating Branches Remotely on GitHub
- 
+
  At this point you shoud already have a GitHub account with a new remote repository created.
-!!! info "Remote Repository" 
+!!! info "Remote Repository"
     A remote repository is not necessarily a copy of a local repository, it is rather a separate repository that can be accessed by multiple users and machines. But typically local repository linked to a remote repository.
 
  You can create a new remote branch in GitHub using the command line. To do so, follow the next steps:
