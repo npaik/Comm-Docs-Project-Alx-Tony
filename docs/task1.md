@@ -46,7 +46,7 @@ Once you have installed Git and have the account created, you can customize your
 - The system-wide configuration file (**/etc/gitconfig**): stores values that apply to every user on the system and all their repositories.
   To access this file, use the **--system** option with git config.
 
-!!! info 
+!!! info
 
     Administrative or superuser privileges are required to modify this file.
 
@@ -94,7 +94,7 @@ git config --global core.editor "code --wait"
 ```
 
 !!! info
-    This sets the code command as the editor, with the --wait option allowing Git to wait for you to close the editor before continuing.
+This sets the code command as the editor, with the --wait option allowing Git to wait for you to close the editor before continuing.
 
 ### Setting Default Branch Name
 
@@ -130,7 +130,6 @@ git config <key>
 
     ![](https://n9.dy.fi/wp-content/uploads/2014/01/Git-9.jpg)
 
-
 ### Getting Help
 
 To get help with Git, you can use any of the following commands.
@@ -162,12 +161,12 @@ If you need further assistance, you can join the #git, #github, or #gitlab chann
 
 - [x] Basics covered:
 
-    - [x] Installation
-    - [x] Customizing Git environment
-    - [x] Setting up identity
-    - [x] Default text editor
-    - [x] Default branch name
-    
+  - [x] Installation
+  - [x] Customizing Git environment
+  - [x] Setting up identity
+  - [x] Default text editor
+  - [x] Default branch name
+
 - [x] Checking Git configuration settings
 - [x] Access help for Git commands (online/offline)
 - [x] Streamlines workflow for developers
