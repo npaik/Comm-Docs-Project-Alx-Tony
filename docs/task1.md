@@ -2,19 +2,18 @@
 
 ## Overview
 
-Git is a version control system that allows developers to track changes in their code, collaborate with others, and manage multiple versions of a project. It is an essential tool for developers that ensure efficient collaboration. It also have a feature to maintain a history of changes of your code. This section will introduce you to the fundamental concepts and commands needed to begin using Git effectively.
+Git is a handy tool that helps developers track code changes, collaborate with others, and manage multiple project versions. It simplifies teamwork and makes coding more enjoyable by keeping track of changes and ensuring smooth collaboration. In this section, we'll teach you the basic ideas and commands to help you start using Git with ease.
 
 ## Installation
 
 ### for Windows
 
-Visit the following Webpage and download Git:
-
-[https://git-scm.com/download/win](https://git-scm.com/download/win)
+Visit the following [Webpage](https://git-scm.com/download/win), download Git, follow the prompts from the installer and complete the Git installation procedure.
 
 ### for macOS
 
-Run the following command on terminal.
+1. Open the terminal.
+2. Run the following command.
 
 ```js
 brew install git
@@ -30,19 +29,26 @@ brew install git
 
 ### Register Github Account
 
-Visit the following webpage to create an Github account
+GitHub lets you save and share code online; by signing up, you can collaborate, showcase projects, and access helpful tools to make coding easier.
 
-[https://github.com/](https://github.com/)
+Visit the following [Webpage](https://github.com/) to create an Github account.
+
+Find the Sign Up button and follow the steps.
 
 ## First-Time Git Setup
 
 ### Customizing Git Environtment
 
+Customizing the Git environment can make coding easier and more comfortable for you. By changing settings, like colors or shortcuts, you can personalize Git to match your preferences and work style, which helps you code more efficiently.
+
 Once you have installed Git and have the account created, you can customize your Git environment using the git config tool. Git configuration variables control how Git looks and operates. These variables can be stored in three different places:
 
 - The system-wide configuration file (**/etc/gitconfig**): stores values that apply to every user on the system and all their repositories.
   To access this file, use the **--system** option with git config.
-  !!! note "note: Administrative or superuser privileges are required to modify this file."
+
+!!! info 
+
+    Administrative or superuser privileges are required to modify this file.
 
 - The user-specific configuration file (**~/.gitconfig** or **~/.config/git/config**) contains settings that are specific to you.
   You can make Git read and write to this file by using the **--global** option, which affects all the repositories you work with on your system.
@@ -50,7 +56,8 @@ Once you have installed Git and have the account created, you can customize your
 - The repository-specific configuration file (**.git/config**) stores settings that are specific to the current repository.
   You can make Git read from and write to this file by using the **--local** option.
 
-!!! Success
+!!! Success "Complete"
+
     You can view all of your settings and where they are coming using following command
     ```js
     git config --list --show-origin
@@ -60,12 +67,19 @@ Once you have installed Git and have the account created, you can customize your
 
 Setting up your user name and email address. This is essential as every Git commit relies on this information. You can set your user name and email address by using the command:
 
+Run the follwoing code to set the user name
+
 ```js
 git config --global user.name "Your Name"
+```
+
+Run the follwoing code to set the email
+
+```js
 git config --global user.email "youremail@example.com"
 ```
 
-!!! note
+!!! info
 
     You only need to do this once using the **--global** option, as Git will always use this information for any action you perform on the system. However, if you want to use a different name or email address for specific projects, you can run the command without the **--global** option when you're working on that project.
 
@@ -73,19 +87,13 @@ git config --global user.email "youremail@example.com"
 
 After setting up your identity, you can configure the default text editor that Git will use when it needs you to type in a message. If you don't configure this, Git will use your system's default editor.
 
-To specify a different text editor, you can use the following command:
-
-```js
-git config --global core.editor <editor_name>
-```
-
-For instance, if you want to use VSCode as your default text editor, you can use this command:
+As an example, if you want to use VSCode as your default text editor, Run the following command:
 
 ```js
 git config --global core.editor "code --wait"
 ```
 
-!!! note
+!!! info
     This sets the code command as the editor, with the --wait option allowing Git to wait for you to close the editor before continuing.
 
 ### Setting Default Branch Name
@@ -98,7 +106,9 @@ To set "main" as the default branch name, you can use the following command:
 git config --global init.defaultBranch main
 ```
 
-This will ensure that any new repository you create with git init will have the branch name "main" instead of "master".
+!!! Success "Complete"
+
+    This will ensure that any new repository you create with git init will have the branch name "main" instead of "master".
 
 ### Checking Git Configuration Settings
 
@@ -116,6 +126,11 @@ You can also check a specific key’s value by
 git config <key>
 ```
 
+!!! Success "Complete"
+
+    ![](https://n9.dy.fi/wp-content/uploads/2014/01/Git-9.jpg)
+
+
 ### Getting Help
 
 To get help with Git, you can use any of the following commands.
@@ -132,10 +147,27 @@ For instance, you can get help for the git config command by running
 git help config
 ```
 
+!!! Success "Complete"
+
+    ![](https://www.prodevelopertutorial.com/wp-content/uploads/2020/08/7_git_help-min.png)
+
 These commands work offline so you can access them from anywhere.
 
-If you need further assistance, you can join the #git, #github, or #gitlab channels on the Libera Chat IRC server at [https://libera.chat/](https://libera.chat/) These channels are filled with experienced Git users who are often willing to help.
+If you need further assistance, you can join the #git, #github, or #gitlab channels on the Libera Chat IRC server at this [Webpage](https://libera.chat/). These channels are filled with experienced Git users who are often willing to help.
 
 ## Conclusion
 
-Git is a powerful version control system that provides developers with the ability to track changes, collaborate with others, and manage multiple versions of a project efficiently. In this section, we have covered the fundamental concepts and commands required to get started with Git, including installation, customization of Git environment, setting up identity, default text editor, default branch name, and checking Git configuration settings. Additionally, we have provided ways to access comprehensive help for any Git command, either online or offline. With this knowledge, developers can use Git effectively and streamline their workflow.
+- [x] Git: powerful version control system
+- [x] Track changes, collaborate, manage multiple versions
+
+- [x] Basics covered:
+
+    - [x] Installation
+    - [x] Customizing Git environment
+    - [x] Setting up identity
+    - [x] Default text editor
+    - [x] Default branch name
+    
+- [x] Checking Git configuration settings
+- [x] Access help for Git commands (online/offline)
+- [x] Streamlines workflow for developers

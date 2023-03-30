@@ -1,44 +1,62 @@
 # Introduction
+Welcome to our Git guide! In this documentation, we'll introduce you to Git, a powerful tool for managing your code and collaborating with others. We'll cover everything you need to know, from getting started to mastering advanced features.
 
-## Commands
+## Target Audience
+This guide is designed for the following users:
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+- Students working on school projects, both individually and in teams.
+- Novice developers setting up their personal projects.
 
-## Project layout
+## Prerequisite Knowledge
+Before diving into this Git guide, you should have:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- Basic understanding of JavaScript (ES6), HTML, and CSS, which allows you to create simple static websites.
+- Experience using the terminal for executing basic commands.
+- Familiarity with Node.js, including using a package manager like npm or yarn to install packages or modules.
 
-!!! note
+## Software Requirements
+Make sure you have the following installed before you continue:
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+Node.js v14.x or later
+Npm Package Manager v7.x or later
+Visual Studio Code
 
-!!! warning
+## Overview of Steps
+In this Git guide, we'll cover the following main sections:
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+**[Getting Started with Git](task1.md)**
 
-!!! Danger
+- [x] Installation
+- [x] First-Time Git Setup
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+**[Git Basics](task2.md)**
+
+- [x] Getting a Git Repository
+- [x] Recording Changes to the Repository
+
+**[Git Branching](task3.md)**
+
+- [x] Creating Branches Locally
+- [x] Creating Branches Remotely
+- [x] Merging Branches
+- [x] Deleting Branches
+
+
+## Notes
+In our guides, we use note boxes to share helpful information with you. Here's a list of the different types of note boxes.
+
+!!! info
+
+    Indicates additional information or tips.
 
 !!! Success
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+    Indicates what success looks like.
 
-!!! info
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+!!! warning
+
+    Specifies content that must be read before proceeding.
+
+!!! Danger
+
+    Specifies actions that may cause an error or will cause the application to crash.
