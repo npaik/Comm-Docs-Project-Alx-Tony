@@ -8,7 +8,6 @@ theme:
     - content.tabs.link
 
 markdown_extensions:
-
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -33,11 +32,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-
-        
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
+plugins:
+  - table-reader

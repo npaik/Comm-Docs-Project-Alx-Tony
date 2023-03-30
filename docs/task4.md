@@ -1,6 +1,6 @@
 # Troubleshooting
 
-
+<!-- 
 Colons can be used to align columns.
 
 | Tables        |      Are      |  Cool |
@@ -16,4 +16,6 @@ raw Markdown line up prettily. You can also use inline Markdown.
 | Markdown | Less      | Pretty     |
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
+| 1        | 2         | 3          | -->
+
+{{ read_excel('./troubleshooting.xlsx', engine='openpyxl') }}
