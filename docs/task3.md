@@ -85,6 +85,7 @@ This will create a new branch called new-branch at the current HEAD (the most re
 This will push the new branch to GitHub and create a new remote branch with the same name.
 
 ## Merging Branches
+At some point, the branch you created will need to be merged back into the main branch or the master branch. 
 To merge changes from one branch to another, you can use the git merge command. For example, to merge changes from "feature-branch" into "main" branch, you can use the following command:
  ```
  git checkout main
@@ -94,6 +95,7 @@ To merge changes from one branch to another, you can use the git merge command. 
     Merging branches can cause conflicts if changes were made to the same lines of code on both branches. Make sure to review and resolve any conflicts that arise during a merge.
 
 ## Deleting Branches
+Once you merged the branch with main,and you no longer it, you can delete the branch. 
 To delete a branch after you're done with it, you can use the git branch -d command followed by the name of the branch. For example, to delete the "feature-branch", you can use the following command:
  ```
  git branch -d feature-branch
