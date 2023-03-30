@@ -2,7 +2,7 @@
 
 ## Overview
 
-This section will guide you on how to use the git branch command and will explain overall Git branching model. You will also see how to create, delete and merge branches.
+This section will guide you on how to use the `git branch` command and will explain overall Git branching model. You will also see how to create, delete and merge branches.
 
 Branching means you diverge from the main line of development and continue to do work without messing with that main line. The flowchart below shows the basic workflow while using the branches with GIT.
 ``` mermaid
@@ -25,34 +25,34 @@ graph LR
 Let’s say you previously initialized the git repository on your computer and you want to create a new branch called ```test```.
 To create this branch locally you need to follow the next steps:
 
-1. Open the command line interface(CLI) on your machine (Command Prompt on Windows, Terminal on MacOS, Bash or Zsh on Linux).
+1. Open the command line interface(CLI) on your machine (**Command Prompt** on Windows, **Terminal** on MacOS, Bash or **Zsh** on Linux).
 
 2. Navigate to the directory of the Git repository where you want to create the branch.
   ```
   cd path/to/repo
   ```
 
-3. Create a new branch using the git branch command followed by the name of the new branch.
+3. Create a new branch using the `git branch` command followed by the name of the new branch.
  ```
  git branch new-branch
  ```
 This will create a new branch called new-branch at the current HEAD (the most recent commit).
 
-4. Switch to the new branch using the git checkout command followed by the name of the new branch.
+4. Switch to the new branch using the `git checkout` command followed by the name of the new branch.
  ```
  git checkout new-branch
  ```
  This will switch the working directory to the new branch so that any changes you make will be committed to that branch instead of the main branch.
 
-5. Make changes to the files in the working directory and commit the changes using the git add and git commit commands as described in previous section.
+5. Make changes to the files in the working directory and commit the changes using the `git add` and `git commit` commands as described in the previous section Git Basics.
 !!! info "Check or Switch Branch"
-    To check which branch you are currently on in Git, you can use the git branch command with the -a (all) and -v (verbose) flags:
+    To check which branch you are currently on in Git, you can use the `git branch` command with the -a (all) and -v (verbose) flags:
     ```
     git branch -av
     ```
     This will list all local and remote branches along with the current branch, which is marked with an asterisk *. The current branch will also be highlighted in green.
 
-    Once you've created a branch, you can switch to it using the git checkout command followed by the name of the branch. For example, to switch to the "feature-branch", you can use the following command:
+    Once you've created a branch, you can switch to it using the `git checkout` command followed by the name of the branch. For example, to switch to the "feature-branch", you can use the following command:
     ```
     git checkout feature-branch
     ```
@@ -96,11 +96,11 @@ To merge changes from one branch to another, you can use the git merge command. 
 
 ## Deleting Branches
 Once you merged the branch with main,and you no longer it, you can delete the branch. 
-To delete a branch after you're done with it, you can use the git branch -d command followed by the name of the branch. For example, to delete the "feature-branch", you can use the following command:
+To delete a branch after you're done with it, you can use the `git branch -d` command followed by the name of the branch. For example, to delete the "feature-branch", you can use the following command:
  ```
  git branch -d feature-branch
  ```
-!!! warning
+!!! danger "Delete branch?"
     Only delete branches that are no longer needed, as deleting a branch will delete all of the commits and changes made on that branch.
 
 ## Conclusion
