@@ -10,16 +10,16 @@ This guide is designed for the following users:
 ## Prerequisite Knowledge
 Before diving into this Git guide, you should have:
 
-- Basic understanding of JavaScript (ES6), HTML, and CSS, which allows you to create simple static websites.
+- Basic programming knowledge.
 - Experience using the terminal for executing basic commands.
-- Familiarity with Node.js, including using a package manager like npm or yarn to install packages or modules.
 
 ## Software Requirements
 Make sure you have the following installed before you continue:
 
-Node.js v14.x or later
-Npm Package Manager v7.x or later
-Visual Studio Code
+Visual Studio Code or other Integrated Development Environment(IDE) that supports command line interface.
+!!! info "Command Line Interface"
+
+    It is not necessary to have an IDE installed to run Git commands. You can simply use default command line interface installed in your operating system.
 
 ## Overview of Steps
 In this Git guide, we'll cover the following main sections:
