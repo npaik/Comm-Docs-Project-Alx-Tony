@@ -10,8 +10,9 @@ There are two methods to acquire a Git repository:
 
 - Setting Up a Repository in an Existing Folder
 - Cloning a Pre-existing Repository
-  !!!note
-  In both cases, you'll have a Git repository on your local machine, ready for work.
+
+!!!note
+    In both cases, you'll have a Git repository on your local machine, ready for work.
 
 #### Setting Up a Repository in an Existing Folder
 
