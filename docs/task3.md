@@ -111,5 +111,3 @@ By the end of this section, you will have successfully learned the following:
 - [x] How to create a new branch in local and remote repository
 - [x] How to switch and check the current branch
 - [x] How to merge and delete the branch in GIT
-
-Great job 🤗. You can go ahead and find the solutions to the most common issues that you might encounter while working with GIT:
