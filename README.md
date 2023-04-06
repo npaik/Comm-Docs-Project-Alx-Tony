@@ -1,4 +1,4 @@
-Authors:
+**Authors**:
 
 - index.md - Introduction(completed by Tony)
 - task1.md - Getting Started with Git(completed by Tony)
@@ -7,7 +7,7 @@ Authors:
 - task4.md - Troubleshooting(completed by Alex)
 - task5.md - Glossary(completed by Alex)
 - troubleshooting.xlsx - Troubleshooting Excel spreadsheet(completed by Alex)
-- glossary.xlsx - Glossary (completed by Alex)
+- glossary.xlsx - Glossary Excel spreadsheet(completed by Alex)
 
 # Overview of Git User Documentation
 
