@@ -30,7 +30,11 @@ However, we recognized that the official Git documentation is extensive and some
 
 ### Using MkDocs
 
+To create the documentation, we utilized the static site generator [MkDocs](https://www.mkdocs.org/). We used the [Material](https://squidfunk.github.io/mkdocs-material/) theme and installed all necessary packages through the Python package manager. Our documentation source files were written in Markdown and configured through a YAML configuration file. 
+
 ### Using VS Code
+
+For Markdown editing and preview, we chose the VS Code IDE as our primary editor and installed two essential extensions - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) and [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint). These extensions enabled us to write, edit, and preview our documentation in the same environment.
 
 ## What we've learned while creating this documentation
 
