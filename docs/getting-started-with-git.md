@@ -37,32 +37,6 @@ Find the Sign Up button and follow the steps.
 
 ## First-Time Git Setup
 
-### Customizing Git Environtment
-
-Customizing the Git environment can make coding easier and more comfortable for you. By changing settings, like colors or shortcuts, you can personalize Git to match your preferences and work style, which helps you code more efficiently.
-
-Once you have installed Git and have the account created, you can customize your Git environment using the git config tool. Git configuration variables control how Git looks and operates. These variables can be stored in three different places:
-
-- The system-wide configuration file (**/etc/gitconfig**): stores values that apply to every user on the system and all their repositories.
-  To access this file, use the **--system** option with git config.
-
-!!! info
-
-    Administrative or superuser privileges are required to modify this file.
-
-- The user-specific configuration file (**~/.gitconfig** or **~/.config/git/config**) contains settings that are specific to you.
-  You can make Git read and write to this file by using the **--global** option, which affects all the repositories you work with on your system.
-
-- The repository-specific configuration file (**.git/config**) stores settings that are specific to the current repository.
-  You can make Git read from and write to this file by using the **--local** option.
-
-!!! Success "Complete"
-
-    You can view all of your settings and where they are coming using following command
-    ```js
-    git config --list --show-origin
-    ```
-
 ### Setting Up Identity
 
 Setting up your user name and email address. This is essential as every Git commit relies on this information. You can set your user name and email address by using the command:
@@ -83,6 +57,26 @@ git config --global user.email "youremail@example.com"
 
     You only need to do this once using the **--global** option, as Git will always use this information for any action you perform on the system. However, if you want to use a different name or email address for specific projects, you can run the command without the **--global** option when you're working on that project.
 
+### Checking Git Configuration Settings
+
+To view all of your Git configuration settings, you can use the command
+
+```js
+git config --list
+```
+
+This will display a list of all settings.
+
+You can also check a specific setting looking at keys and values running following command
+
+```js
+git config <key>
+```
+
+!!! Success "Complete"
+
+    ![](https://n9.dy.fi/wp-content/uploads/2014/01/Git-9.jpg)
+
 ### Setting Default Text Editor
 
 After setting up your identity, you can configure the default text editor that Git will use when it needs you to type in a message. If you don't configure this, Git will use your system's default editor.
@@ -90,11 +84,15 @@ After setting up your identity, you can configure the default text editor that G
 As an example, if you want to use VSCode as your default text editor, Run the following command:
 
 ```js
-git config --global core.editor "code --wait"
+git config --global core.editor "code"
 ```
+!!! Sucess "Complete"
+    Run the following command on terminal to check if the default editor is set to VSCode.
+    VSCode will show as "code"
 
-!!! info
-This sets the code command as the editor, with the --wait option allowing Git to wait for you to close the editor before continuing.
+    ```js
+    git config core.editor
+    ```
 
 ### Setting Default Branch Name
 
@@ -110,34 +108,12 @@ git config --global init.defaultBranch main
 
     This will ensure that any new repository you create with git init will have the branch name "main" instead of "master".
 
-### Checking Git Configuration Settings
-
-To view all of your Git configuration settings, you can use the command
-
-```js
-git config --list
-```
-
-This will display a list of all settings.
-
-You can also check a specific key’s value by
-
-```js
-git config <key>
-```
-
-!!! Success "Complete"
-
-    ![](https://n9.dy.fi/wp-content/uploads/2014/01/Git-9.jpg)
-
 ### Getting Help
 
-To get help with Git, you can use any of the following commands.
+To get help with Git, you can use run following command to see the list of helps you can get.
 
 ```js
-git help <verb>
-git <verb> --help
-man git-<verb>
+git help
 ```
 
 For instance, you can get help for the git config command by running
@@ -146,7 +122,10 @@ For instance, you can get help for the git config command by running
 git help config
 ```
 
+
 !!! Success "Complete"
+
+    Input "q" to exit from the help view
 
     ![](https://www.prodevelopertutorial.com/wp-content/uploads/2020/08/7_git_help-min.png)
 
@@ -161,12 +140,11 @@ If you need further assistance, you can join the #git, #github, or #gitlab chann
 
 - [x] Basics covered:
 
-  - [x] Installation
-  - [x] Customizing Git environment
-  - [x] Setting up identity
-  - [x] Default text editor
-  - [x] Default branch name
+    - [x] Installation
+    - [x] Setting up identity
+    - [x] Checking Git configuration settings
+    - [x] Default text editor
+    - [x] Default branch name
 
-- [x] Checking Git configuration settings
 - [x] Access help for Git commands (online/offline)
 - [x] Streamlines workflow for developers
