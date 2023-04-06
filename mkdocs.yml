@@ -24,7 +24,7 @@ jobs:
       - run: mkdocs gh-deploy --force
 
 nav:
-  - Introduction: introduction.md
+  - Introduction: index.md
   - Getting Started with Git: getting-started-with-git.md
   - Git Basics: git-basics.md
   - Git Branching: git-branching.md
