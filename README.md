@@ -1,13 +1,13 @@
 **Authors**:
 
-- index.md - Introduction(completed by Tony)
-- task1.md - Getting Started with Git(completed by Tony)
-- task2.md - Git Basics(completed by Tony)
-- task3.md - Git Branching(completed by Alex)
-- task4.md - Troubleshooting(completed by Alex)
-- task5.md - Glossary(completed by Alex)
-- troubleshooting.xlsx - Troubleshooting Excel spreadsheet(completed by Alex)
-- glossary.xlsx - Glossary Excel spreadsheet(completed by Alex)
+- `introduction.md` - Introduction(completed by Tony)
+- `getting-started-with-git.md` - Getting Started with Git(completed by Tony)
+- `git-basics.md` - Git Basics(completed by Tony)
+- `git-branching.md` - Git Branching(completed by Alex)
+- `troubleshooting.md` - Troubleshooting(completed by Alex)
+- `glossary.md` - Glossary(completed by Alex)
+- `troubleshooting.xlsx` - Troubleshooting Excel spreadsheet(completed by Alex)
+- `glossary.xlsx` - Glossary Excel spreadsheet(completed by Alex)
 
 # Overview of Git User Documentation
 
