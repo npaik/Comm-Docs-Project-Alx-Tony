@@ -1,0 +1,635 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../introduction/">
+      
+      
+        <link rel="next" href="../git-basics/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>Getting Started with Git - Git</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started-with-git" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Git" class="md-header__button md-logo" aria-label="Git" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Git
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started with Git
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Git" class="md-nav__button md-logo" aria-label="Git" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Git
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting Started with Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Getting Started with Git
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-windows" class="md-nav__link">
+    for Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-macos" class="md-nav__link">
+    for macOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-github-account" class="md-nav__link">
+    Register Github Account
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-time-git-setup" class="md-nav__link">
+    First-Time Git Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="First-Time Git Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customizing-git-environtment" class="md-nav__link">
+    Customizing Git Environtment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-identity" class="md-nav__link">
+    Setting Up Identity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-default-text-editor" class="md-nav__link">
+    Setting Default Text Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-default-branch-name" class="md-nav__link">
+    Setting Default Branch Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-git-configuration-settings" class="md-nav__link">
+    Checking Git Configuration Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    Getting Help
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-basics/" class="md-nav__link">
+        Git Basics
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-branching/" class="md-nav__link">
+        Git Branching
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="getting-started-with-git">Getting Started with Git</h1>
+<h2 id="overview">Overview</h2>
+<p>Git is a handy tool that helps developers track code changes, collaborate with others, and manage multiple project versions. It simplifies teamwork and makes coding more enjoyable by keeping track of changes and ensuring smooth collaboration. In this section, we'll teach you the basic ideas and commands to help you start using Git with ease.</p>
+<h2 id="installation">Installation</h2>
+<h3 id="for-windows">for Windows</h3>
+<p>Visit the following <a href="https://git-scm.com/download/win">Webpage</a>, download Git, follow the prompts from the installer and complete the Git installation procedure.</p>
+<h3 id="for-macos">for macOS</h3>
+<ol>
+<li>Open the terminal.</li>
+<li>Run the following command.</li>
+</ol>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">brew</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">git</span>
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Complete</p>
+<p>Run the following command on terminal to check if the git is correctly installed.
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">git</span><span class="w"> </span><span class="o">--</span><span class="nx">version</span>
+</span></code></pre></div>
+<img alt="" src="https://www.howtogeek.com/wp-content/uploads/2021/10/Your-Git-version..png?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
+</div>
+<h3 id="register-github-account">Register Github Account</h3>
+<p>GitHub lets you save and share code online; by signing up, you can collaborate, showcase projects, and access helpful tools to make coding easier.</p>
+<p>Visit the following <a href="https://github.com/">Webpage</a> to create an Github account.</p>
+<p>Find the Sign Up button and follow the steps.</p>
+<h2 id="first-time-git-setup">First-Time Git Setup</h2>
+<h3 id="customizing-git-environtment">Customizing Git Environtment</h3>
+<p>Customizing the Git environment can make coding easier and more comfortable for you. By changing settings, like colors or shortcuts, you can personalize Git to match your preferences and work style, which helps you code more efficiently.</p>
+<p>Once you have installed Git and have the account created, you can customize your Git environment using the git config tool. Git configuration variables control how Git looks and operates. These variables can be stored in three different places:</p>
+<ul>
+<li>The system-wide configuration file (<strong>/etc/gitconfig</strong>): stores values that apply to every user on the system and all their repositories.
+  To access this file, use the <strong>--system</strong> option with git config.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Administrative or superuser privileges are required to modify this file.</p>
+</div>
+<ul>
+<li>
+<p>The user-specific configuration file (<strong>~/.gitconfig</strong> or <strong>~/.config/git/config</strong>) contains settings that are specific to you.
+  You can make Git read and write to this file by using the <strong>--global</strong> option, which affects all the repositories you work with on your system.</p>
+</li>
+<li>
+<p>The repository-specific configuration file (<strong>.git/config</strong>) stores settings that are specific to the current repository.
+  You can make Git read from and write to this file by using the <strong>--local</strong> option.</p>
+</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Complete</p>
+<p>You can view all of your settings and where they are coming using following command
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nx">list</span><span class="w"> </span><span class="o">--</span><span class="nx">show</span><span class="o">-</span><span class="nx">origin</span>
+</span></code></pre></div></p>
+</div>
+<h3 id="setting-up-identity">Setting Up Identity</h3>
+<p>Setting up your user name and email address. This is essential as every Git commit relies on this information. You can set your user name and email address by using the command:</p>
+<p>Run the follwoing code to set the user name</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+</span></code></pre></div>
+<p>Run the follwoing code to set the email</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="w"> </span><span class="s2">&quot;youremail@example.com&quot;</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You only need to do this once using the <strong>--global</strong> option, as Git will always use this information for any action you perform on the system. However, if you want to use a different name or email address for specific projects, you can run the command without the <strong>--global</strong> option when you're working on that project.</p>
+</div>
+<h3 id="setting-default-text-editor">Setting Default Text Editor</h3>
+<p>After setting up your identity, you can configure the default text editor that Git will use when it needs you to type in a message. If you don't configure this, Git will use your system's default editor.</p>
+<p>As an example, if you want to use VSCode as your default text editor, Run the following command:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">core</span><span class="p">.</span><span class="nx">editor</span><span class="w"> </span><span class="s2">&quot;code --wait&quot;</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>This sets the code command as the editor, with the --wait option allowing Git to wait for you to close the editor before continuing.</p>
+<h3 id="setting-default-branch-name">Setting Default Branch Name</h3>
+<p>When you create a new repository with git init, Git will create a branch called "master" by default. However, from Git version 2.28 onwards, you can set a different name for the initial branch.</p>
+<p>To set "main" as the default branch name, you can use the following command:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">init</span><span class="p">.</span><span class="nx">defaultBranch</span><span class="w"> </span><span class="nx">main</span>
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Complete</p>
+<p>This will ensure that any new repository you create with git init will have the branch name "main" instead of "master".</p>
+</div>
+<h3 id="checking-git-configuration-settings">Checking Git Configuration Settings</h3>
+<p>To view all of your Git configuration settings, you can use the command</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nx">list</span>
+</span></code></pre></div>
+<p>This will display a list of all settings.</p>
+<p>You can also check a specific key’s value by</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">key</span><span class="o">&gt;</span>
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Complete</p>
+<p><img alt="" src="https://n9.dy.fi/wp-content/uploads/2014/01/Git-9.jpg" /></p>
+</div>
+<h3 id="getting-help">Getting Help</h3>
+<p>To get help with Git, you can use any of the following commands.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">help</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">verb</span><span class="o">&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nx">git</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">verb</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nx">help</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">man</span><span class="w"> </span><span class="nx">git</span><span class="o">-&lt;</span><span class="nx">verb</span><span class="o">&gt;</span>
+</span></code></pre></div>
+<p>For instance, you can get help for the git config command by running</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">help</span><span class="w"> </span><span class="nx">config</span>
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Complete</p>
+<p><img alt="" src="https://www.prodevelopertutorial.com/wp-content/uploads/2020/08/7_git_help-min.png" /></p>
+</div>
+<p>These commands work offline so you can access them from anywhere.</p>
+<p>If you need further assistance, you can join the #git, #github, or #gitlab channels on the Libera Chat IRC server at this <a href="https://libera.chat/">Webpage</a>. These channels are filled with experienced Git users who are often willing to help.</p>
+<h2 id="conclusion">Conclusion</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Git: powerful version control system</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Track changes, collaborate, manage multiple versions</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Basics covered:</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Installation</p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Customizing Git environment</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Setting up identity</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Default text editor</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Default branch name</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Checking Git configuration settings</p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Access help for Git commands (online/offline)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Streamlines workflow for developers</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../git-basics/" class="md-footer__link md-footer__link--next" aria-label="Next: Git Basics" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Git Basics
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.integrate", "content.tabs.link", "navigation.footer"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>
