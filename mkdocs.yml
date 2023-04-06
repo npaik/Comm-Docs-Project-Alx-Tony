@@ -1,5 +1,13 @@
 site_name: Git
 
+nav:
+  - Introduction: introduction.md
+  - Getting Started with Git: getting-started-with-git.md
+  - Git Basics: git-basics.md
+  - Git Branching: git-branching.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+
 theme:
   name: material
   features:

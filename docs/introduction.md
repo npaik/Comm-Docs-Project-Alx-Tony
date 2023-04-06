@@ -24,17 +24,17 @@ Visual Studio Code or other Integrated Development Environment(IDE) that support
 ## Overview of Steps
 In this Git guide, we'll cover the following main sections:
 
-**[Getting Started with Git](task1.md)**
+**[Getting Started with Git](getting-started-with-git.md)**
 
 - [x] Installation
 - [x] First-Time Git Setup
 
-**[Git Basics](task2.md)**
+**[Git Basics](git-basics.md)**
 
 - [x] Getting a Git Repository
 - [x] Recording Changes to the Repository
 
-**[Git Branching](task3.md)**
+**[Git Branching](git-branching.md)**
 
 - [x] Creating Branches Locally
 - [x] Creating Branches Remotely
