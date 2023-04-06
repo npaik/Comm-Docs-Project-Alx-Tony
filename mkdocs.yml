@@ -31,6 +31,10 @@ nav:
   - Troubleshooting: troubleshooting.md
   - Glossary: glossary.md
 
+repo_url: https://github.com/npaik/Comm-Docs-Project-Alx-Tony
+
+repo_name: Git-Docs-Project-Alx-Tony
+
 theme:
   name: material
   features:
