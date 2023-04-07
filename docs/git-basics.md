@@ -172,17 +172,10 @@ Git supports various transfer protocols, such as https://, git://, or user@serve
 - [x] Essential Git commands covered:
 
   - [x] Setup and initialize repository
-  - [x] Track files
-  - [x] Stage and commit modifications
-  - [x] Exclude files and patterns
-  - [x] Correct errors
-  - [x] Explore project history
-  - [x] Push and pull from remote repositories
-
-- [x] Git benefits:
-
-  - [x] Robust framework for code management
-  - [x] Organized and efficient projects
-  - [x] Ideal for personal or collaborative work
-
-- [x] Outcome: Master version control and boost productivity
+  - [x] Recording changes
+    - [x] Accessing the status of the files
+    - [x] Commiting changes
+    - [x] Pushing to repository
+  - [x] Tracking New files
+  - [x] Fetching and Pulling from your remotes
+  - [x] Cloning a pre-exsisting repository

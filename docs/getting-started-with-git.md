@@ -140,11 +140,10 @@ If you need further assistance, you can join the #git, #github, or #gitlab chann
 
 - [x] Basics covered:
 
-    - [x] Installation
+    - [x] Installation and Registration
     - [x] Setting up identity
     - [x] Checking Git configuration settings
     - [x] Default text editor
     - [x] Default branch name
 
-- [x] Access help for Git commands (online/offline)
-- [x] Streamlines workflow for developers
+- [x] Get Help
