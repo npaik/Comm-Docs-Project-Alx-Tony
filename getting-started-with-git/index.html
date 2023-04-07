@@ -15,7 +15,7 @@
         <link rel="next" href="../git-basics/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.240905d7.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -303,15 +303,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#customizing-git-environtment" class="md-nav__link">
-    Customizing Git Environtment
+  <a href="#setting-up-identity" class="md-nav__link">
+    Setting Up Identity
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#setting-up-identity" class="md-nav__link">
-    Setting Up Identity
+  <a href="#checking-git-configuration-settings" class="md-nav__link">
+    Checking Git Configuration Settings
   </a>
   
 </li>
@@ -326,13 +326,6 @@
           <li class="md-nav__item">
   <a href="#setting-default-branch-name" class="md-nav__link">
     Setting Default Branch Name
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checking-git-configuration-settings" class="md-nav__link">
-    Checking Git Configuration Settings
   </a>
   
 </li>
@@ -467,86 +460,61 @@
 <p>Visit the following <a href="https://github.com/">Webpage</a> to create an Github account.</p>
 <p>Find the Sign Up button and follow the steps.</p>
 <h2 id="first-time-git-setup">First-Time Git Setup</h2>
-<h3 id="customizing-git-environtment">Customizing Git Environtment</h3>
-<p>Customizing the Git environment can make coding easier and more comfortable for you. By changing settings, like colors or shortcuts, you can personalize Git to match your preferences and work style, which helps you code more efficiently.</p>
-<p>Once you have installed Git and have the account created, you can customize your Git environment using the git config tool. Git configuration variables control how Git looks and operates. These variables can be stored in three different places:</p>
-<ul>
-<li>The system-wide configuration file (<strong>/etc/gitconfig</strong>): stores values that apply to every user on the system and all their repositories.
-  To access this file, use the <strong>--system</strong> option with git config.</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Administrative or superuser privileges are required to modify this file.</p>
-</div>
-<ul>
-<li>
-<p>The user-specific configuration file (<strong>~/.gitconfig</strong> or <strong>~/.config/git/config</strong>) contains settings that are specific to you.
-  You can make Git read and write to this file by using the <strong>--global</strong> option, which affects all the repositories you work with on your system.</p>
-</li>
-<li>
-<p>The repository-specific configuration file (<strong>.git/config</strong>) stores settings that are specific to the current repository.
-  You can make Git read from and write to this file by using the <strong>--local</strong> option.</p>
-</li>
-</ul>
-<div class="admonition success">
-<p class="admonition-title">Complete</p>
-<p>You can view all of your settings and where they are coming using following command
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nx">list</span><span class="w"> </span><span class="o">--</span><span class="nx">show</span><span class="o">-</span><span class="nx">origin</span>
-</span></code></pre></div></p>
-</div>
 <h3 id="setting-up-identity">Setting Up Identity</h3>
 <p>Setting up your user name and email address. This is essential as every Git commit relies on this information. You can set your user name and email address by using the command:</p>
 <p>Run the follwoing code to set the user name</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
 </span></code></pre></div>
 <p>Run the follwoing code to set the email</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="w"> </span><span class="s2">&quot;youremail@example.com&quot;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="w"> </span><span class="s2">&quot;youremail@example.com&quot;</span>
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>You only need to do this once using the <strong>--global</strong> option, as Git will always use this information for any action you perform on the system. However, if you want to use a different name or email address for specific projects, you can run the command without the <strong>--global</strong> option when you're working on that project.</p>
 </div>
-<h3 id="setting-default-text-editor">Setting Default Text Editor</h3>
-<p>After setting up your identity, you can configure the default text editor that Git will use when it needs you to type in a message. If you don't configure this, Git will use your system's default editor.</p>
-<p>As an example, if you want to use VSCode as your default text editor, Run the following command:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">core</span><span class="p">.</span><span class="nx">editor</span><span class="w"> </span><span class="s2">&quot;code --wait&quot;</span>
-</span></code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-</div>
-<p>This sets the code command as the editor, with the --wait option allowing Git to wait for you to close the editor before continuing.</p>
-<h3 id="setting-default-branch-name">Setting Default Branch Name</h3>
-<p>When you create a new repository with git init, Git will create a branch called "master" by default. However, from Git version 2.28 onwards, you can set a different name for the initial branch.</p>
-<p>To set "main" as the default branch name, you can use the following command:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">init</span><span class="p">.</span><span class="nx">defaultBranch</span><span class="w"> </span><span class="nx">main</span>
-</span></code></pre></div>
-<div class="admonition success">
-<p class="admonition-title">Complete</p>
-<p>This will ensure that any new repository you create with git init will have the branch name "main" instead of "master".</p>
-</div>
 <h3 id="checking-git-configuration-settings">Checking Git Configuration Settings</h3>
 <p>To view all of your Git configuration settings, you can use the command</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nx">list</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nx">list</span>
 </span></code></pre></div>
 <p>This will display a list of all settings.</p>
-<p>You can also check a specific key’s value by</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">key</span><span class="o">&gt;</span>
+<p>You can also check a specific setting looking at keys and values running following command</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">key</span><span class="o">&gt;</span>
 </span></code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Complete</p>
 <p><img alt="" src="https://n9.dy.fi/wp-content/uploads/2014/01/Git-9.jpg" /></p>
 </div>
+<h3 id="setting-default-text-editor">Setting Default Text Editor</h3>
+<p>After setting up your identity, you can configure the default text editor that Git will use when it needs you to type in a message. If you don't configure this, Git will use your system's default editor.</p>
+<p>As an example, if you want to use VSCode as your default text editor, Run the following command:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">core</span><span class="p">.</span><span class="nx">editor</span><span class="w"> </span><span class="s2">&quot;code&quot;</span>
+</span></code></pre></div>
+<div class="admonition sucess">
+<p class="admonition-title">Complete</p>
+<p>Run the following command on terminal to check if the default editor is set to VSCode.
+VSCode will show as "code"</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nx">core</span><span class="p">.</span><span class="nx">editor</span>
+</span></code></pre></div>
+</div>
+<h3 id="setting-default-branch-name">Setting Default Branch Name</h3>
+<p>When you create a new repository with git init, Git will create a branch called "master" by default. However, from Git version 2.28 onwards, you can set a different name for the initial branch.</p>
+<p>To set "main" as the default branch name, you can use the following command:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">--</span><span class="nb">global</span><span class="w"> </span><span class="nx">init</span><span class="p">.</span><span class="nx">defaultBranch</span><span class="w"> </span><span class="nx">main</span>
+</span></code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Complete</p>
+<p>This will ensure that any new repository you create with git init will have the branch name "main" instead of "master".</p>
+</div>
 <h3 id="getting-help">Getting Help</h3>
-<p>To get help with Git, you can use any of the following commands.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">help</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">verb</span><span class="o">&gt;</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nx">git</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">verb</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="nx">help</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">man</span><span class="w"> </span><span class="nx">git</span><span class="o">-&lt;</span><span class="nx">verb</span><span class="o">&gt;</span>
+<p>To get help with Git, you can use run following command to see the list of helps you can get.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">help</span>
 </span></code></pre></div>
 <p>For instance, you can get help for the git config command by running</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">help</span><span class="w"> </span><span class="nx">config</span>
 </span></code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Complete</p>
+<p>Input "q" to exit from the help view</p>
 <p><img alt="" src="https://www.prodevelopertutorial.com/wp-content/uploads/2020/08/7_git_help-min.png" /></p>
 </div>
 <p>These commands work offline so you can access them from anywhere.</p>
@@ -559,20 +527,17 @@
 </li>
 <li class="task-list-item">
 <p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Basics covered:</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Installation</p>
-</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Customizing Git environment</li>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Installation</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Setting up identity</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Checking Git configuration settings</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Default text editor</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Default branch name</p>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Default branch name</li>
+</ul>
 </li>
 <li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Checking Git configuration settings</p>
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Access help for Git commands (online/offline)</p>
 </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Access help for Git commands (online/offline)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Streamlines workflow for developers</li>
 </ul>
 
@@ -655,7 +620,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.integrate", "content.tabs.link", "navigation.footer"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../assets/javascripts/bundle.19047be9.min.js"></script>
       
     
   </body>
