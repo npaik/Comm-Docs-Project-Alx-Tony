@@ -33,6 +33,8 @@ In this Git guide, we'll cover the following main sections:
 
 - [x] Getting a Git Repository
 - [x] Recording Changes to the Repository
+- [x] Pushing to your Remotes
+- [x] Fetching and Pulling from Your Remotes
 
 **[Git Branching](git-branching.md)**
 
