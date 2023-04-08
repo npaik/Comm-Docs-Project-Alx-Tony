@@ -4,7 +4,7 @@
 
 This section will guide you on how to use the `git branch` command and will explain overall Git branching model. You will also see how to create, delete and merge branches.
 
-Branching means you diverge from the main line of development and continue to do work without messing with that main line. The flowchart below shows the basic workflow while using the branches with GIT.
+Branching means you diverge from the main line of development and continue to do work without messing with that main line. The flowchart below shows the basic workflow while using the branches with Git.
 ``` mermaid
 graph LR
     A[Main] --> B[Main] 
@@ -17,7 +17,7 @@ graph LR
 ```
  This is useful when you want to work on a new feature or fix a bug without affecting the stability of the main branch.
  
-!!! info "Branching in GIT"
+!!! info "Branching in Git"
     Git encourages workflows that branch and merge often, even multiple times in a day. Understanding and mastering this feature gives you a powerful and unique tool and can entirely change the way that you develop.
 
 ## Creating Branches Locally
@@ -46,7 +46,7 @@ This will create a new branch called new-branch at the current HEAD (the most re
 
 5. Make changes to the files in the working directory and commit the changes using the `git add` and `git commit` commands as described in the previous section Git Basics.
 !!! info "Check or Switch Branch"
-    To check which branch you are currently on in Git, you can use the `git branch` command with the -a (all) and -v (verbose) flags:
+    To check which branch you are currently on in Git, you can use the `git branch` command with the `-a` (all) and `-v` (verbose) flags:
     ```
     git branch -av
     ```
@@ -65,27 +65,27 @@ This will create a new branch called new-branch at the current HEAD (the most re
 
  You can create a new remote branch in GitHub using the command line. To do so, follow the next steps:
 
-1. Clone the repository to your local machine using the git clone command.
+1. Clone the repository to your local machine using the `git clone` command.
  ```
  git clone https://github.com/your-username/your-repository.git
  ```
-2. Navigate to the cloned repository using the cd command.
+2. Navigate to the cloned repository using the `cd` command.
  ```
  cd your-repository
  ```
-3. Create a new branch and switch to that branch by using the git command followed by the name of the new branch.
+3. Create a new branch and switch to that branch by using the `git` command followed by the name of the new branch.
  ```
  git checkout -b new-branch-name
  ```
-4. Make changes to the files in the working directory and commit the changes using the git add and git commit commands as describes in the previous section Git Basics.
-5. Push the new branch to GitHub using the git push command with the --set-upstream flag to link the local and remote branches.
+4. Make changes to the files in the working directory and commit the changes using the `git add` and `git commit` commands as described in the previous section **[Git Basics](git-basics.md)**.
+5. Push the new branch to GitHub using the `git push` command with the `--set-upstream` flag to link the local and remote branches.
  ```
  git push --set-upstream origin new-branch
  ```
 This will push the new branch to GitHub and create a new remote branch with the same name.
 
 ## Merging Branches
-At some point, the branch you created will need to be merged back into the main branch or the master branch. 
+At some point, the branch you created will need to be merged back into the `main` branch or the `master` branch. 
 To merge changes from one branch to another, you can use the git merge command. For example, to merge changes from "feature-branch" into "main" branch, you can use the following command:
  ```
  git checkout main
@@ -95,7 +95,7 @@ To merge changes from one branch to another, you can use the git merge command. 
     Merging branches can cause conflicts if changes were made to the same lines of code on both branches. Make sure to review and resolve any conflicts that arise during a merge.
 
 ## Deleting Branches
-Once you merged the branch with main,and you no longer it, you can delete the branch. 
+Once you merged the branch with main,and you no longer need it, you can delete the branch. 
 To delete a branch after you're done with it, you can use the `git branch -d` command followed by the name of the branch. For example, to delete the "feature-branch", you can use the following command:
  ```
  git branch -d feature-branch
@@ -107,7 +107,7 @@ To delete a branch after you're done with it, you can use the `git branch -d` co
 
 By the end of this section, you will have successfully learned the following:
 
-- [x] How the GIT branching model works
+- [x] How the Git branching model works
 - [x] How to create a new branch in local and remote repository
 - [x] How to switch and check the current branch
-- [x] How to merge and delete the branch in GIT
+- [x] How to merge and delete the branch in Git
