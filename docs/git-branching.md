@@ -34,13 +34,13 @@ To create this branch locally you need to follow the next steps:
 
 3. Create a new branch using the `git branch` command followed by the name of the new branch.
  ```
- git branch new-branch
+ git branch test
  ```
 This will create a new branch called new-branch at the current HEAD (the most recent commit).
 
 4. Switch to the new branch using the `git checkout` command followed by the name of the new branch.
  ```
- git checkout new-branch
+ git checkout test
  ```
  This will switch the working directory to the new branch so that any changes you make will be committed to that branch instead of the main branch.
 
