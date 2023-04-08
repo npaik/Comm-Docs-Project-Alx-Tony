@@ -37,7 +37,18 @@ To create the documentation, we utilized the static site generator [MkDocs](http
 
 For Markdown editing and preview, we chose the VS Code IDE as our primary editor and installed two essential extensions - [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) and [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint). These extensions enabled us to write, edit, and preview our documentation in the same environment.
 
-## What we've learned while creating this documentation
+## What We've Learned While Creating This Documentation
+
+### Technical Skills
+
+While creating this Git User Documentation, we learned various technical skills that will be useful for future documentation projects and in our careers. We gained experience with Markdown, MkDocs, and Git, which will help us create, edit, and manage documentation more efficiently:
+- Understanding Markdown's essentials will help us create clear and easy-to-follow instructions for readers in the future.
+- We learned how to use MkDocs to create a simple and user-friendly documentation site.
+- By practicing Git, we became more comfortable with its use, which will be beneficial for future coding projects and collaborations with other developers.
+
+### Web Writing Techniques
+
+To make our web documentation more accessible, we used chunking to break down complex concepts and used lists to present information in an organized way. These techniques helped us create content that is easy to follow and accessible to all. Overall, our experience helped us become better writers for the web.
 
 ## Conclusion
 
