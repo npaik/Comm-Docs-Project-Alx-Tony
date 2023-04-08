@@ -291,54 +291,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recording-changes-to-the-repository" class="md-nav__link">
-    Recording Changes to the Repository
-  </a>
-  
-    <nav class="md-nav" aria-label="Recording Changes to the Repository">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#assessing-the-status-of-your-files" class="md-nav__link">
-    Assessing the Status of Your Files
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commiting-changes" class="md-nav__link">
-    Commiting changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pushing-to-your-remotes" class="md-nav__link">
-    Pushing to your Remotes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tracking-new-files" class="md-nav__link">
-    Tracking New Files
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fetching-and-pulling-from-your-remotes" class="md-nav__link">
-    Fetching and Pulling from Your Remotes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#cloning-a-pre-existing-repository" class="md-nav__link">
     Cloning a Pre-existing Repository
   </a>
@@ -347,6 +299,27 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracking-and-recording-changes-to-the-repository" class="md-nav__link">
+    Tracking and Recording Changes to the Repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushing-to-your-remotes" class="md-nav__link">
+    Pushing to your Remotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fetching-and-pulling-from-your-remotes" class="md-nav__link">
+    Fetching and Pulling from Your Remotes
+  </a>
   
 </li>
       
@@ -443,81 +416,29 @@
 </div>
 <h3 id="setting-up-a-repository-in-an-existing-folder">Setting Up a Repository in an Existing Folder</h3>
 <p>If you want to use Git to manage a project folder that isn't under version control, first navigate to the project's folder. The process varies depending on your operating system:</p>
-<ul>
-<li>Navigate to the project folder.</li>
-</ul>
-<p>Windows:</p>
+<ol>
+<li>Navigate to the project folder.<ol>
+<li>on Windows run:
 <div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">cd</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">/Users/user/my_project</span>
-</span></code></pre></div>
-<p>macOS:</p>
+</span></code></pre></div></li>
+<li>on macOS run:
 <div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">cd</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">Users</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">my_project</span><span class="p">;</span>
-</span></code></pre></div>
-<p>Run the following command:
+</span></code></pre></div></li>
+</ol>
+</li>
+<li>Run the following command:
   <div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">init</span>
 </span></code></pre></div>
-This command creates a new hidden .git subdirectory containing all the required repository files - a Git repository framework. At this stage, none of your project files are being tracked. Refer to Git Internals for more details on the .git directory's contents.</p>
-<p>To begin version control for existing files, start tracking the files and make an initial commit. Use several git add commands to specify the files to track, followed by a git commit:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="p">.</span>
-</span></code></pre></div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">LICENSE</span>
-</span></code></pre></div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">README</span><span class="p">.</span><span class="nx">md</span>
-</span></code></pre></div>
-<p>At this point, your Git repository contains tracked files.</p>
-<h3 id="recording-changes-to-the-repository">Recording Changes to the Repository</h3>
-<p>Git enables modifying and committing tracked and untracked files. Changes since the last commit are identified and can be staged and committed again.</p>
-<h4 id="assessing-the-status-of-your-files">Assessing the Status of Your Files</h4>
-<p>The git status command is the primary tool you'll use to determine the state of your files.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">status</span>
-</span></code></pre></div>
-<div class="admonition success">
-<p class="admonition-title">Complete</p>
-<p><img alt="" src="https://static.javatpoint.com/tutorial/git/images/git-status2.png" /></p>
-</div>
-<h4 id="commiting-changes">Commiting changes</h4>
-<p>After staging your changes with git add, you can commit them with git commit.
-The commit message can be entered in your editor or provided inline with the -m flag. The commit command creates a snapshot of your project that can be reverted to or compared to later. Any changes that weren't staged will remain as modified files.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">commit</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="s2">&quot;&lt;message&gt;&quot;</span>
-</span></code></pre></div>
-<h4 id="pushing-to-your-remotes">Pushing to your Remotes</h4>
-<p><div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">branch</span><span class="w"> </span><span class="o">-</span><span class="nx">M</span><span class="w"> </span><span class="nx">main</span>
-</span></code></pre></div>
-The command git branch -M main renames the current branch to "main," forcing the change even if the new branch name already exists.</p>
-<p>Next command adds a new remote named "origin" to your local Git repository, pointing to the specified URL.
-<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">remote</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">origin</span><span class="w"> </span><span class="err">&quot;</span><span class="nx">http</span><span class="o">:</span><span class="c1">//github.com/testrepository.git</span>
-</span></code></pre></div></p>
-<p>The command git push -u origin main uploads your main branch to the remote repository called "origin" and sets it up for easy syncing in the future.
-<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">push</span><span class="w"> </span><span class="o">-</span><span class="nx">u</span><span class="w"> </span><span class="nx">origin</span><span class="w"> </span><span class="nx">main</span>
-</span></code></pre></div></p>
-<h3 id="tracking-new-files">Tracking New Files</h3>
-<p>To track a new file, use the git add command. For example, to track the TEST file, run:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">TEST</span>
-</span></code></pre></div>
-<p>After running git status, you can see that TEST is now tracked and staged for commit:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">status</span>
-</span></code></pre></div>
-<p>The file is staged when listed under "Changes to be committed." The version of the file at the time of running git add will be in the subsequent snapshot if you commit at this point</p>
-<h3 id="fetching-and-pulling-from-your-remotes">Fetching and Pulling from Your Remotes</h3>
-<p>When you want to get data from a remote project, use the command</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">remote</span><span class="o">&gt;</span>
-</span></code></pre></div>
-<p>This will pull down all the data from the remote that you don't have yet. The git fetch command only downloads the data to your local repository and doesn't modify any of your current work.</p>
-<p>If your current branch is set up to track a remote branch, you can use the command</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">pull</span>
-</span></code></pre></div>
-<p>to automatically fetch and merge the remote branch into your current branch. By default, git clone sets up your local master branch to track the remote master branch. However, from git version 2.27 onwards, git pull will give a warning if the pull.rebase variable is not set. You can set this variable to true if you want to rebase when pulling.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>However, this command only works if you cloned from a server to which you have write access and if no one else has pushed anything upstream. If someone else has pushed upstream, you need to <strong>fetch</strong> their work and incorporate it into yours before you can push your changes.</p>
-</div>
+This command creates a new hidden .git subdirectory containing all the required repository files - a Git repository framework. At this stage, none of your project files are being tracked. Refer to Git Internals for more details on the .git directory's contents.</li>
+</ol>
 <h3 id="cloning-a-pre-existing-repository">Cloning a Pre-existing Repository</h3>
-<p>If you want to make a copy of a Git project that already exists, use the <strong>git clone</strong> command. Unlike some other systems like Subversion, Git uses <strong>clone</strong> instead of <strong>checkout</strong>. This is important because Git gets a full copy of the project, including its whole history and every version of each file, not just the current files. So, when you use <strong>git clone</strong>, you'll have everything you need from the original project.</p>
+<p>If you want to make a copy of a Git project that already exists on the server(GitHub), use the <strong>git clone</strong> command. Unlike some other systems like Subversion, Git uses <strong>clone</strong> instead of <strong>checkout</strong>. This is important because Git gets a full copy of the project, including its whole history and every version of each file, not just the current files. So, when you use <strong>git clone</strong>, you'll have everything you need from the original project.</p>
 <p>To clone a repository, use git clone <url>. For example, to clone the Git linkable markdown:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">clone</span><span class="w"> </span><span class="nx">https</span><span class="o">:</span><span class="c1">//github.com/npaik/Comm-Docs-Project-Alx-Tony</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">clone</span><span class="w"> </span><span class="nx">https</span><span class="o">:</span><span class="c1">//github.com/npaik/Comm-Docs-Project-Alx-Tony</span>
 </span></code></pre></div>
 <p>This command makes a new folder, sets up a ".git" folder inside it, gets all the project data, and gives you the newest version of the files. When you go into the new folder, you'll see the project files, all set for you to use or change as you like.</p>
 <p>To clone the repository into a differently-named directory, specify a new name as an additional argument:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">clone</span><span class="w"> </span><span class="nx">https</span><span class="o">:</span><span class="c1">//github.com/npaik/Comm-Docs-Project-Alx-Tony gitproject</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">clone</span><span class="w"> </span><span class="nx">https</span><span class="o">:</span><span class="c1">//github.com/npaik/Comm-Docs-Project-Alx-Tony gitproject</span>
 </span></code></pre></div>
 <p>This command behaves like the previous one, but the target directory is named gitproject.</p>
 <div class="admonition success">
@@ -525,6 +446,66 @@ The command git branch -M main renames the current branch to "main," forcing the
 <p><img alt="" src="https://cdn.ttgtmedia.com/rms/onlineImages/ServerSide_git-clone-02.jpg" /></p>
 </div>
 <p>Git supports various transfer protocols, such as https://, git://, or user@server:path/to/repo.git (using the SSH transfer protocol). The "Getting Git on a Server" section will introduce all available options for server access to your Git repository and their respective advantages and disadvantages.</p>
+<h2 id="tracking-and-recording-changes-to-the-repository">Tracking and Recording Changes to the Repository</h2>
+<p>To assess the current status of the files in your git repository run the <code>git status</code> command. You will see which files are currently tracked.</p>
+<div class="admonition success">
+<p class="admonition-title">Complete<p><img alt="" src="https://static.javatpoint.com/tutorial/git/images/git-status2.png" /></p>
+</p>
+</div>
+<ol>
+<li>
+<p>Start tracking files</p>
+<ol>
+<li>To begin version control for existing files, start tracking the files and make an initial commit. You have to use several git add commands to specify the files to track:
+<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="p">.</span>
+</span></code></pre></div>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">LICENSE</span>
+</span></code></pre></div>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">README</span><span class="p">.</span><span class="nx">md</span>
+</span></code></pre></div>
+At this point, your Git repository contains tracked files.</li>
+<li>If you just added a new file and want to track it, use the <code>git add</code> command. For example, to track just added <code>TEST</code> file, run:
+<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">TEST</span>
+</span></code></pre></div>
+After running git status, you can see that <code>TEST</code> is now tracked and staged for commit:
+<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">status</span>
+</span></code></pre></div>
+The file is staged when listed under "Changes to be committed." The version of the file at the time of running <code>git add</code> will be in the subsequent snapshot if you commit at this point.</li>
+</ol>
+</li>
+<li>
+<p>Commit changes</p>
+</li>
+</ol>
+<p>Git enables modifying and committing tracked and untracked files. Changes since the last commit are identified and can be staged and committed again.</p>
+<p>After staging your changes with <code>git add</code> in the step 2, you can commit them with <code>git commit</code>.
+The commit message can be entered in your editor or provided inline with the <code>-m</code> flag. The commit command creates a snapshot of your project that can be reverted to or compared to later. Any changes that weren't staged will remain as modified files. Run the following command to commit the changes:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">commit</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="s2">&quot;&lt;message&gt;&quot;</span>
+</span></code></pre></div>
+<h2 id="pushing-to-your-remotes">Pushing to your Remotes</h2>
+<p>First run the following command:
+<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">branch</span><span class="w"> </span><span class="o">-</span><span class="nx">M</span><span class="w"> </span><span class="nx">main</span>
+</span></code></pre></div>
+The command git branch -M main renames the current branch to "main," forcing the change even if the new branch name already exists.</p>
+<p>Next command adds a new remote named "origin" to your local Git repository, pointing to the specified URL.
+<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">remote</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">origin</span><span class="w"> </span><span class="err">&quot;</span><span class="nx">http</span><span class="o">:</span><span class="c1">//github.com/testrepository.git</span>
+</span></code></pre></div></p>
+<p>The command git push -u origin main uploads your main branch to the remote repository called "origin" and sets it up for easy syncing in the future.
+<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">push</span><span class="w"> </span><span class="o">-</span><span class="nx">u</span><span class="w"> </span><span class="nx">origin</span><span class="w"> </span><span class="nx">main</span>
+</span></code></pre></div></p>
+<h2 id="fetching-and-pulling-from-your-remotes">Fetching and Pulling from Your Remotes</h2>
+<p>When you want to get data from a remote project, use the command</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">remote</span><span class="o">&gt;</span>
+</span></code></pre></div>
+<p>This will pull down all the data from the remote that you don't have yet. The git fetch command only downloads the data to your local repository and doesn't modify any of your current work.</p>
+<p>If your current branch is set up to track a remote branch, you can use the command</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">git</span><span class="w"> </span><span class="nx">pull</span>
+</span></code></pre></div>
+<p>to automatically fetch and merge the remote branch into your current branch. By default, git clone sets up your local master branch to track the remote master branch. However, from git version 2.27 onwards, git pull will give a warning if the pull.rebase variable is not set. You can set this variable to true if you want to rebase when pulling.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>However, this command only works if you cloned from a server to which you have write access and if no one else has pushed anything upstream. If someone else has pushed upstream, you need to <strong>fetch</strong> their work and incorporate it into yours before you can push your changes.</p>
+</div>
 <h2 id="conclusion">Conclusion</h2>
 <ul class="task-list">
 <li class="task-list-item">
